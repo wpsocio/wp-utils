@@ -1,0 +1,32 @@
+{
+	"name": "wpsocio/wp-utils",
+	"description": "Utilities for WordPress plugins and themes",
+	"type": "library",
+	"license": "GPL-3.0-or-later",
+	"autoload": {
+		"psr-4": {
+			"WPSocio\\WPUtils\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "WP Socio"
+		}
+	],
+	"scripts": {
+		"lint": "\"vendor/bin/phpcs\" --standard=../../../phpcs.xml --extensions=php .",
+		"lint:skip-warnings": "\"vendor/bin/phpcs\" --standard=../../../phpcs.xml --extensions=php -n .",
+		"lint:fix": "\"vendor/bin/phpcbf\" --standard=../../../phpcs.xml --extensions=php .",
+		"test": "\"vendor/bin/pest\""
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.0.1",
+		"pestphp/pest": "^1.22"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": false,
+			"pestphp/pest-plugin": false
+		}
+	}
+}
